@@ -149,7 +149,28 @@ class phoneBook
     }
     void searchByContactID()
     {
-
+        int con_id;
+        cout<<"Enter Contact id: ";
+        cin>>con_id;
+        bool flag = false;
+        node *a = head;
+        while(a!=NULL)
+        {
+            if(a->contact_id==con_id)
+            {
+                flag=true;
+                break;
+            }
+            a=a->next;
+        }
+        if(flag)
+        {
+            cout<<"Your contac found and name is: "<<a->name<<endl;
+        }
+        else 
+        {
+            cout<<"Contact is not found"<<endl;
+        }
     }
     void searchByPhoneNo()
     {
