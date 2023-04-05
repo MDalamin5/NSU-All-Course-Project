@@ -145,7 +145,7 @@ class phoneBook
         {
             cout<<"Sorry! Name Not Found";
         }
-
+        
     }
     void searchByContactID()
     {
@@ -226,9 +226,49 @@ class phoneBook
     // delet method start
     void eraseContact()
     {
+        int cos_opt;
         cout<<"which contact you want to delete"<<endl;
-        cout<<"Enter contact name"<<endl;
+        //cout<<"Enter contact name"<<endl;
+        cout<<"How way to daelte the contact"<<endl;
+        cout<<"Chose your option: "<<endl;
+        cout<<"1. Delete Contact Search by name: "<<endl;
+        cout<<"2. Delete Contack Search by PhoneNumber: "<<endl;
+        cout<<"Please Enter your choise: "<<endl;
+        cin>>cos_opt;
+        switch (cos_opt)
+        {
+            case 1: 
+            eraseSrcByName();
+            break;
+
+            case 2:
+            eraseSrcByPhoneNumber();
+            break;
+        
+            default:
+            cout<<"You are enteing wrong input"<<endl;
+            break;
+        }
+
         //delete contact by name, id, phone number
+    }
+
+    void eraseSrcByName()
+    {
+        string src_name;
+        cout<<"Enter the Deleting Contact name: ";
+        fflush(stdin);
+        getline(cin,src_name);
+        fflush(stdin);
+        if(head->name==src_name)
+        {
+            
+        }
+
+    }
+    void eraseSrcByPhoneNumber()
+    {
+
     }
     //delete method end
 
